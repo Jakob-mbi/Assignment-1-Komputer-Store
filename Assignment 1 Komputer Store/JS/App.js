@@ -4,7 +4,27 @@ const borrowElement = document.getElementById('borrowBtn');
 const changeVisibility = document.getElementById('loan');
 const changeVisibilityWork = document.getElementById('Repay');
 const payBalance = document.getElementById('payBalance');
+const featuresElement = document.getElementById('features')
+const computersElement = document.getElementById('laptops');
 
+let computers = [];
+
+fetch("https://hickory-quilled-actress.glitch.me/computers")
+    .then(response => response.json())
+    .then(data => computers = data)
+    .then(computers => addComputersToSelector(computers));
+
+const addComputersToSelector = (computers) => {
+    computers.map(element => addComputerToSelector(element));
+}
+
+
+const addComputerToSelector = (computer) => {
+    const computerElement = document.createElement("option");
+    computerElement.value = computer.id;
+    computerElement.appendChild(document.createTextNode(computer.title));
+    computersElement.appendChild(computerElement);
+}
 
 let currentBalance = 0;
 let currentDebt = 0;
