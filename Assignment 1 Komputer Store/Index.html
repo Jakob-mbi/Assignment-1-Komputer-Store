@@ -48,23 +48,39 @@
         </div>
         <div class="col-12 col-md-6 col-lg-4">
             <div class="card h-100 w-75 p-3 border-0" id="LaptopsCard">
-              <h2 class="card-title">Laptops</h2>                 
+              <h3 class="card-title">Laptops</h3>                 
               <div class="col">
-                <select name="laptops" id="laptops" class="form-select w-75">
-                  
+                <select name="laptops" id="computerSelection" class="form-select w-75">
                 </select>
               </div>
               <div class="col">
-                <h4>Features:</h4>
-                <p class="card-text" id="features"></p>
+                <h5>Features:</h5>
+                <p class="card-text overflow-auto" id="features"></p>
               </div>
             </div>
         </div>
       </div>
-      <div class="card h-100 w-100 p-3 border-0 mt-5" id="workCard">
-        <div class="row g-5">
-          <h2>Work</h2>
-          <p>Pay</p>
+      <div class="card mt-5" id="workCard">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img class="card-img" alt=".." id="img"></img>
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <h5 class="card-title" id="product">Card title</h5>
+              <p class="card-text" id="description">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <div class="d-flex justify-content-center">
+                <h5 class="card-title" id="price">Card title</h5>
+              </div>
+              <div class="mt-5">
+                <Button class="btn btn-info w-100" type="button" id="buyBtn"><b>Buy Now</b></Button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
