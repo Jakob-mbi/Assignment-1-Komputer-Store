@@ -80,7 +80,8 @@ const borrow = function(){
     {
         return alert('You need to pay back current debt in full to get a new loan')
     }
-    const borrowAmount = Number(prompt('Please enter the amount you want to borrow')); 
+    const borrowAmount = Number(prompt('Please enter the amount you want to borrow'));
+    if(Number.isNaN(borrowAmount)){return alert('That is not a number')} 
     const maxBorrowAmount = currentBalance*2;
     if(borrowAmount>maxBorrowAmount){
         return alert('You cannot get a loan more than double your current bank balance');
